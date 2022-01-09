@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #b5b2b2;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            font-size: calc(14px + 0.7vw);
+            background-color: aquamarine;
+            padding: 0 30px;
+            margin: 0 15%;
+            height: 50px;
+        }
+
+        .banner p {
+            margin-top: calc(2px + 0.7vw);
+        }
+
+        input {
+            margin-top: calc(4px + 0.7vw);
+            width: 200px;
+            height: 15px;
+        }
+
+        .menu {
+            display: flex;
+            list-style-type: none;
+            padding-top: 10px;
+            height: 35px;
+            text-transform: uppercase;
+
+            font-weight: 600;
+            margin: 0 15%;
+            background-color: beige;
+        }
+
+        .menu li {
+            margin-right: 45px;
+            margin-left: 15px;
+            font-size: calc(10px + 0.3vw);
+            text-decoration: none;
+            color: black;
+            margin-bottom: 15px;
+            margin-left: 34px;
+            margin-right: 10px;
+        }
+
+        .menu li:hover {
+            cursor: pointer;
+            border-bottom: 1px solid #16abc6;
+        }
+
+        .currently {
+            margin: 0.5% 15%;
+            background-color: snow;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-top: 0.2%;
+        }
+
+        .up {
+            display: flex;
+            justify-content: space-between;
+            width: 65vw;
+            height: 4vh;
+            margin: 10px calc(14px + 0.7vw) 0 calc(14px + 0.7vw);
+
+        }
+
+        .up p {
+            font-size: calc(14px + 0.7vw);
+            font-weight: 500;
+        }
+
+        #temp {
+            display: flex;
+            justify-content: space-around;
+            width: 70vw;
+            height: 12vh;
+            margin: 1% 3%;
+            font-size: calc(12px + 0.7vw);
+
+        }
+
+        .weath {
+            width: 14vw;
+            height: 10vh;
+            text-align: center;
+        }
+
+        .weath img {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .weath p {
+            margin-top: 0;
+        }
+
+        .temperature {
+            width: 20vw;
+            margin: 0 10px;
+            text-align: center;
+            font-size: calc(22px + 0.7vw);
+
+        }
+
+        .temperature p {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .sun {
+            width: 20vw;
+            height: 9vh;
+            margin: 15px 10px;
+            text-align: center;
+        }
+
+        .sun p {
+            margin-top: 5px;
+        }
+
+        .real {
+            font-size: calc(6px + 0.7vw);
+            margin-top: 0;
+        }
+
+        .hourlyBack {
+            background-color: snow;
+            min-height: 300px;
+            margin: 0.5% 15%;
+            height: 44vh;
+            padding-bottom: 1px;
+
+        }
+
+        .hourlyBack p {
+            margin-bottom: 30px;
+            font-size: calc(14px + 0.7vw);
+            padding-top: 10px;
+            margin-left: 25px;
+
+
+        }
+
+        #hourlyWeather {
+            display: flex;
+            flex-wrap: wrap;
+            height: 33.4vh;
+            margin: 0 4.5%;
+        }
+
+        .datTime {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+
+            width: 7vw;
+            height: 170px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            min-width: 60px;
+            margin: 2px;
+            padding: 1px;
+        }
+
+        #hourlyWeather p {
+            font-size: calc(8px + 0.7vw);
+            margin: 0.1vw 1vw 0 0.1vw;
+        }
+
+        .datTime img {
+            padding-left: 2vw;
+            margin: 0.1vw 1vw 0 0;
+        }
+
+        #hourlyTemp {
+            margin-left: 50px;
+        }
+
+        #townBack {
+            background-color: snow;
+            margin: 0.5% 15%;
+            height: 20vh;
+            padding: 10px;
+
+        }
+
+        #title {
+            font-size: calc(14px + 0.7vw);
+            font-weight: 500;
+            padding: 0;
+            padding-top: 15px;
+            margin-left: 30px;
+        }
+
+        #towns {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 0 35px;
+            height: 8vh;
+            margin: 1% 3% 0 3%;
+            padding: 1px;
+        }
+
+        .OneTown {
+            background-color: #e8e2e2;
+            width: 27vh;
+            min-width: 200px;
+            margin: 1px;
+            height: 4vh;
+            min-height: 20px;
+            display: inline-flex;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+
+
+
+        #p3 {
+            display: none;
+        }
+
+        #p4 {
+            display: none;
+        }
+
+        #p1 {
+            display: none;
+        }
+
+        #p2 {
+            display: none;
+        }
+
+        #p6 {
+            display: none;
+        }
+
+        #p5 {
+            display: none;
+        }
+
+
+        .datTime {
+            background-color: #16abc6;
+            width: 7vw;
+            height: 13vh;
+            border: 1px solid gray;
+            border-radius: 0px;
+            margin: 1px;
+        }
+
+        .day:hover {
+            cursor: pointer;
+            -webkit-transform: scale(1.0);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+        
+        .day p:first-child{
+            margin-top: 85px;
+            margin-bottom: 10px;
+            font-size: calc(10px + 0.7vw);
+            font-weight: 600;
+        }
+        .day p:last-child{
+            font-size: calc(16px + 0.7vw);
+        }
+
+        .OneDayWeather {
+            margin: 0.5% 15%;
+            height: 56vh;
+
+        }
+
+        #OneDay {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            height: 41vh;
+        }
+
+        .DayWeather {
+            border: 1px solid grey;
+            float: left;
+            width: 17.2vw;
+            height: 19.5vh;
+            background-color: #16abc6;
+            text-align: center;
+            margin: 1.8px;
+        }
+        
+        .DayWeather p:first-child{
+            margin-top: 35px;
+        }
+
+        .day {
+            border: 1px solid grey;
+            float: left;
+            width: 13.7vw;
+            height: 30vh;
+            background-color: antiquewhite;
+            
+        }
+
+        #fiveDays {
+            margin: 0.5% 15%;
+            height: 30vh;
+            background-color: "";
+            display: flex;
+            justify-content: space-between;
+                        text-align: center;
+
+        }
+        
+        #fiveDays{
+            display: none;
+        }
+        .OneDayWeather{
+                        display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <p>WEATHER tIME</p>
+        <input type="text" id="townNameINPT">
+    </div>
+
+    <header>
+        <ol class="menu">
+            <li id="todayLI">Today</li>
+            <li id="5DayLI">5-day forecast</li>
+        </ol>
+    </header>
+
+
+    
+    <div class="currently" >
+        <div class="up">
+            <p>CURRENT WEATHER</p>
+            <p id="day"></p>
+        </div>
+        <div id="temp"></div>
+    </div>
+    <div class="hourlyBack">
+        <p>HOURLY</p>
+        <div id="hourlyWeather">
+        </div>
+    </div>
+
+    <div id="townBack">
+        <p id="title">NEARBY PLACES</p>
+        <div id="towns"></div>
+    </div>
+
+
+    <div id="fiveDays">
+    </div>
+
+    <div class="OneDayWeather">
+        <div id="OneDay"></div>
+    </div>
+
+
+    <div class="pos">
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+        <p id="p6"></p>
+                <p id="p7"></p>
+                <p id="p8"></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function design() {
+            var d = new Date();
+            day.innerHTML += d.getDay() + "." + (d.getMonth() + 1) + "." + d.getFullYear();
+        }
+        design();
+    </script>
+    <script src="today.js"></script>
+    <script src="TownName.js"></script>
+
+
+
+</body></html>
